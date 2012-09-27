@@ -1,0 +1,22 @@
+{
+  "name": "voltron-mongo-adapter",
+  "version": "0.1.0",
+  "description": "A data adapter plugin for VoltronModels",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "Voltron",
+    "model",
+    "mongo",
+    "mongodb"
+  ],
+  "dependencies": {
+    "q": "0.8.x",
+    "mongodb": "1.0.x"
+  },
+  "author": "Justin Reidy <jmreidy@rzrsharp.net> (http://rzrsharp.net)",
+  "license": "BSD",
+  "private": true
+}
