@@ -1,5 +1,5 @@
 {
-  "name": "voltron-mongo-adapter",
+  "name": "voltron-adapter",
   "version": "0.1.0",
   "description": "A data adapter plugin for VoltronModels",
   "main": "index.js",
