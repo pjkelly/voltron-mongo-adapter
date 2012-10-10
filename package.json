@@ -13,7 +13,7 @@
     "mongodb"
   ],
   "dependencies": {
-    "q": "0.8.x",
+    "q": "~0.8.9",
     "mongodb": "1.0.x",
     "sinon": "1.3.x"
   },
