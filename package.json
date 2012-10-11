@@ -15,7 +15,8 @@
   "dependencies": {
     "q": "~0.8.9",
     "mongodb": "1.0.x",
-    "sinon": "1.3.x"
+    "sinon": "1.3.x",
+    "voltron-hooks": "git://github.com/jmreidy/VoltronHooks.git#master"
   },
   "author": "Justin Reidy <jmreidy@rzrsharp.net> (http://rzrsharp.net)",
   "license": "BSD",
