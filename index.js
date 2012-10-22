@@ -5,8 +5,9 @@ module.exports = VoltronAdapter;
 VoltronAdapter.Mongo = require('./lib/adapters/mongo');
 
 function VoltronAdapter(Model, adapter, hooks) {
-  addStatics(Model, adapter);
-  addModelDelegates(Model, adapter);
+  var Adapter = adapter.constructor;
+  Adapter.addStatics(Model, adapter);
+  Adapter.addDelegates(Model, adapter);
   VoltronHooks.defineBeforeHook(Model.prototype, 'save');
   if (hooks) {
     Object.keys(hooks).forEach(function (key) {
@@ -18,18 +19,6 @@ function VoltronAdapter(Model, adapter, hooks) {
 }
 
 
-var addStatics = function(Model, adapter) {
-  Model.findAll = adapter.findAll;
-  Model.findOne = adapter.findOne;
-};
-
-var addModelDelegates = function(Model, adapter) {
-  Model.prototype.save = adapter.save;
-  Model.prototype.remove = adapter.remove;
-  Object.defineProperty(Model.prototype, 'id', {
-    get: adapter.id
-  });
-};
 
 
 
