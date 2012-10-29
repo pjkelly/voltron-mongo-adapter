@@ -3,6 +3,7 @@ var VoltronHooks = require('voltron-hooks');
 module.exports = VoltronAdapter;
 
 VoltronAdapter.Mongo = require('./lib/adapters/mongo');
+VoltronAdapter.Postgres = require('./lib/adapters/postgres');
 
 function VoltronAdapter(Model, adapter, hooks) {
   var Adapter = adapter.constructor;
