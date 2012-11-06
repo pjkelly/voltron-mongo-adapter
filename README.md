@@ -1,1 +1,2 @@
-Do not use this (yet).
+Still in very active development, and no tests yet -- be warned!
+
