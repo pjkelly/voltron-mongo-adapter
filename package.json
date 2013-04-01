@@ -14,8 +14,8 @@
     "postgres"
   ],
   "dependencies": {
-    "q": "~0.8.10",
-    "mongodb": "1.0.x",
+    "q": "~0.9.x",
+    "mongodb": "~1.2.14",
     "pg": "0.8.x",
     "sinon": "1.3.x",
     "voltron-hooks": "git://github.com/jmreidy/voltron-hooks.git#master"
