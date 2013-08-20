@@ -1,10 +1,8 @@
 var VoltronHooks = require('voltron-hooks');
 
-module.exports = VoltronAdapter;
+module.exports = require('./lib/adapters/mongo');
 
-VoltronAdapter.Mongo = require('./lib/adapters/mongo');
-
-function VoltronAdapter(Model, adapter, hooks) {
+module.exports.wrap = function (Model, adapter, hooks) {
   adapter.modelConstructor = Model;
   if (Model.prototype.hasOwnProperty('_primaryKey')) {
     adapter.primaryKey = Model.prototype._primaryKey;
@@ -24,7 +22,7 @@ function VoltronAdapter(Model, adapter, hooks) {
     });
   }
   return Model;
-}
+};
 
 
 
