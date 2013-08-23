@@ -1,6 +1,6 @@
 {
   "name": "voltron-mongo-adapter",
-  "version": "0.2.2",
+  "version": "0.2.3",
   "description": "A mongodb data adapter plugin for VoltronModels",
   "main": "index.js",
   "scripts": {
