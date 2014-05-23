@@ -37,12 +37,8 @@ The Adapter constructor takes the following arguments `(collectionName, options)
 ### Configure
 `MongoAdapter.configure` takes the following arguments:
 
-`server`: The server to which to connect
-`port`: The port to which to connect
-`db`: The name of the db to which to connect.
-`options`: A hash of `user`, `password` for connecting (if necessary).
-
-a new `Server` and `Db` instance are created. See driver docs for details.
+`connectionString`: The URL connection string to use. [docs](http://mongodb.github.io/node-mongodb-native/driver-articles/mongoclient.html#the-url-connection-format)
+`options`: A hash of configuration options to use when for connecting (if necessary). [docs](http://mongodb.github.io/node-mongodb-native/driver-articles/mongoclient.html#mongoclient-connect-options)
 
 ### Prototype methods
 The following methods are exposed on the adapter:
