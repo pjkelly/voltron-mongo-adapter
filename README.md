@@ -37,8 +37,18 @@ The Adapter constructor takes the following arguments `(collectionName, options)
 ### Configure
 `MongoAdapter.configure` takes the following arguments:
 
-`connectionString`: The URL connection string to use. [docs](http://mongodb.github.io/node-mongodb-native/driver-articles/mongoclient.html#the-url-connection-format)
-`options`: A hash of configuration options to use when for connecting (if necessary). [docs](http://mongodb.github.io/node-mongodb-native/driver-articles/mongoclient.html#mongoclient-connect-options)
+`connectionOptions`: A hash of connection options to be used when establishing the connection with the database. 
+* `url`: for establishing a connection via mongo url, including support for replica sets.  See conventions for the url connection format: [docs](http://mongodb.github.io/node-mongodb-native/driver-articles/mongoclient.html#the-url-connection-format)
+
+or
+
+* `server`: domain where the database lives, e.g. `localhost`
+* `port`: e.g. `3000`
+* `db`: name of the database to connect to
+* `username`: username for connecting to the database, if any
+* `password`: password for connecting to the database, if any
+
+`configOptions`: A hash of configuration options to use when for connecting (if necessary). [docs](http://mongodb.github.io/node-mongodb-native/driver-articles/mongoclient.html#mongoclient-connect-options)
 
 ### Prototype methods
 The following methods are exposed on the adapter:
@@ -63,6 +73,13 @@ is assumed to have a provisioned ID, and the document and ID are passed to the d
 If the ID does not exist, the document is passed to `insert`. Insert operations return a promise with the
 newly created ID (which is also passed to a CB, if provided); update operations simply return a promise
 (and call a provided callback on completion).
+
+
+### Tests
+
+```sh
+$ npm test
+```
 
 
 ## License
